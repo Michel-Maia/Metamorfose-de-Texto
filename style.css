@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151515;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    font-size: 10rem;
+    margin: 0;
+}
+
+.l-words {
+    display: grid;
+    filter: blur(1px) contrast(10);
+    place-items: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.c-word {
+    filter: blur(25px);
+    animation: word 1.25s ease-in-out infinite alternate;
+    text-align: center;
+    transition: filter 750ms ease-in-out;
+}
+
+.c-word:hover {
+    filter: blur(0);
+}
+
+@keyframes word {
+    from { filter: blur(0) }
+    to { filter: blur(25px)}
+}
+
